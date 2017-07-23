@@ -11,6 +11,7 @@ import java.util.*;
  */
 @Service
 public class ProductServiceImpl implements ProductService {
+    //TODO : Adjust product to match Customer
     private Map<Integer,Product> products;
 
     public ProductServiceImpl() {

@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * Created by El-Feky on 7/20/17.
  */
-public class Product {
+public class Product implements DomainObject{
     private Integer id;
     private String description;
     private BigDecimal price;

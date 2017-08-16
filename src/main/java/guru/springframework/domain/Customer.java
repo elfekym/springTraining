@@ -1,11 +1,17 @@
 package guru.springframework.domain;
 
+import javax.persistence.*;
+
 /**
  * Created by El-Feky on 7/23/17.
  */
+@Entity
 public class Customer implements DomainObject {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @Version
+    private Integer version;
     private String firstName;
     private String lastName;
     private String email;
@@ -98,5 +104,11 @@ public class Customer implements DomainObject {
         this.zipCode = zipCode;
     }
 
+    public Integer getVersion() {
+        return version;
+    }
 
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
 }

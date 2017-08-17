@@ -1,6 +1,7 @@
-package guru.springframework.services;
+package guru.springframework.services.jpaservices;
 
 import guru.springframework.domain.Product;
+import guru.springframework.services.ProductService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.List;
  */
 @Service
 @Profile("jpadao")
-public class ProductServiceJpaDaoImpl implements ProductService {
+public class ProductServiceJpaDaoImpl extends AbstractJpaDaoService implements ProductService {
     private EntityManagerFactory emf;
 
     @PersistenceUnit
